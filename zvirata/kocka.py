@@ -7,7 +7,7 @@ class Kocka(Zvire):
         super().__init__(vaha, barva)
 
     def mluv(self):
-        return "Mňau"
+        pass
 
 
 

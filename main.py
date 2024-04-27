@@ -1,20 +1,18 @@
-from kocka import Kocka
-from zvire import Zvire
-from kachna import Kachna
+from lide.clovek import Clovek
 
-zvire = Zvire(10, "průhledná")
-kachna = Kachna(2, "bílá")
-kocka = Kocka(8, "Hnědá")
+bob = Clovek("Bob", 25)
+alice = Clovek("Alice", 30)
 
+bob.vklad(5000)
+alice.vklad(10000)
 
-farma = [zvire, kachna, kocka]
+print(bob.stav_konta())
+print(alice.stav_konta())
 
-for zvire in farma:
-    print(zvire.mluv())
+Clovek.inflace(0.85)
 
-
-
-
+print(bob.stav_konta())
+print(alice.stav_konta())
 
 
 
@@ -27,10 +25,18 @@ for zvire in farma:
 
 
 
+"""
+příklad lambda
+jmena = ["Adam", "Bob", "Charlie", "David", "Eve", "Fred", "Ginny", "Harriet"]
 
+jmena2 = list(filter(lambda jmeno: len(jmeno) < 4, jmena))
 
+print(jmena2)
+"""
 
-
+# příklad na Enum, barvičky
+#kacka = Kachna(2, Barvy.BILA)
+#print(kacka.barva.value)
 
 """
 from clovek import Clovek

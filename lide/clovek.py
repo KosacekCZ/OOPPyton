@@ -1,9 +1,22 @@
 class Clovek:
+    __konto = 0
 
     def __init__(self, jmeno, vek):
         self.jmeno = jmeno
         self.__vek = vek
         self.__cislo_karty = "1234 5678 9101 1121"
+
+
+
+    def stav_konta(self):
+        return Clovek.__konto
+
+    def vklad(self, castka):
+        Clovek.__konto += castka
+
+    @staticmethod
+    def inflace(mira):
+        Clovek.__konto *= mira
 
 
 
