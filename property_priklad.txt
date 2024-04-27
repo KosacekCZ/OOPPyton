@@ -1,0 +1,13 @@
+# Getter
+# předtím
+print(lojza.get_vek())
+
+# nově, s property
+print(lojza.vek)
+
+# Setter
+# předtím
+lojza.set_vek(35)
+
+# nově, s property
+lojza.vek = 35

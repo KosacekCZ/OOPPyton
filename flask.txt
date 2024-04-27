@@ -1,0 +1,11 @@
+from flask import Flask
+
+webapp = Flask(__name__)
+
+@webapp.route("/")
+def home_page():
+    return "".join(open("index.html", "r").readlines())
+
+@webapp.route("/galerie")
+def galerie_page():
+    return "<h1>Galerie</h1>"
